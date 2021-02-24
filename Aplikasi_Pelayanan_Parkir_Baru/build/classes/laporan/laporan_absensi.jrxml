@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="89d5bd40-f653-4968-bf5b-70aa16ec7203">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     detail_data_absensi.`detail_id_absensi` AS detail_data_absensi_detail_id_absensi,
+     detail_data_absensi.`detail_tanggal_absensi` AS detail_data_absensi_detail_tanggal_absensi,
+     detail_data_absensi.`detail_lokasi` AS detail_data_absensi_detail_lokasi,
+     detail_data_absensi.`id_absensi_baru` AS detail_data_absensi_id_absensi_baru,
+     detail_data_absensi.`detail_nik` AS detail_data_absensi_detail_nik,
+     detail_data_absensi.`detail_nama` AS detail_data_absensi_detail_nama,
+     detail_data_absensi.`detail_shift` AS detail_data_absensi_detail_shift,
+     detail_data_absensi.`detail_jam_masuk` AS detail_data_absensi_detail_jam_masuk,
+     detail_data_absensi.`detail_jam_pulang` AS detail_data_absensi_detail_jam_pulang,
+     detail_data_absensi.`detail_keterangan` AS detail_data_absensi_detail_keterangan
+FROM
+     `detail_data_absensi` detail_data_absensi]]>
+	</queryString>
+	<field name="detail_data_absensi_detail_id_absensi" class="java.lang.String"/>
+	<field name="detail_data_absensi_detail_tanggal_absensi" class="java.sql.Date"/>
+	<field name="detail_data_absensi_detail_lokasi" class="java.lang.String"/>
+	<field name="detail_data_absensi_id_absensi_baru" class="java.lang.String"/>
+	<field name="detail_data_absensi_detail_nik" class="java.lang.String"/>
+	<field name="detail_data_absensi_detail_nama" class="java.lang.String"/>
+	<field name="detail_data_absensi_detail_shift" class="java.lang.String"/>
+	<field name="detail_data_absensi_detail_jam_masuk" class="java.lang.String"/>
+	<field name="detail_data_absensi_detail_jam_pulang" class="java.lang.String"/>
+	<field name="detail_data_absensi_detail_keterangan" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="113" splitType="Stretch">
+			<staticText>
+				<reportElement x="230" y="23" width="310" height="23" uuid="64cd750f-9b4a-4a6e-b0a1-2890545afb22"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Jalan M.H. Thamrin Kav 8-10 RT. 14 / RW. 20]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="46" width="310" height="23" uuid="8cae8eaa-9095-4951-bfd1-1e4a2e9e1662"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Kebon Melati Kecamatan Tanah Abang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="69" width="310" height="23" uuid="e0dbcc88-2a9d-4f08-8e1d-4d7f7e3307f6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Jakarta Pusat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="0" width="310" height="23" uuid="857cfba1-faa1-43cf-a788-90344aa68839"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PT SECURINDO PACKATAMA INDONESIA]]></text>
+			</staticText>
+			<image>
+				<reportElement x="87" y="0" width="143" height="97" uuid="5deaa3d9-7bca-4fb0-a1ef-4646ef283611"/>
+				<imageExpression><![CDATA["C:\\Users\\opik\\Documents\\NetBeansProjects\\Aplikasi_Pelayanan_Parkir\\src\\gambar\\logo_spi.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="82" splitType="Stretch">
+			<staticText>
+				<reportElement x="230" y="17" width="310" height="23" uuid="204f5ed8-cb9e-40e7-a008-8074c43aeb6f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA ABSENSI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="54" width="100" height="20" uuid="d0f4af3e-ca56-4cd5-8c81-fe86b645cd63"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Waktu Cetak  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="145" y="54" width="100" height="20" uuid="0310444e-eb38-482e-9c7e-db46ecea0306"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[WIB]]></text>
+			</staticText>
+			<textField pattern="HH.mm.ss">
+				<reportElement x="88" y="54" width="100" height="20" uuid="c0eabf86-2ba0-47bd-a654-a0c868867d22"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="0" width="85" height="20" uuid="50f3bc5a-b9c7-4d73-908d-46e32b129725"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="88" y="0" width="57" height="20" uuid="d0619528-692e-47f9-ad63-c5f50a009a6c"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Lokasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="145" y="0" width="140" height="20" uuid="44dc0532-7e4d-4490-8757-06e0c73d54fa"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[NIK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="285" y="0" width="156" height="20" uuid="38c486e8-ddc3-4e81-b3d5-16c37a0df46a"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="441" y="0" width="131" height="20" uuid="326eb5e4-223c-4610-8b15-942d57aa4ad4"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Shift]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="572" y="0" width="66" height="20" uuid="fc2ea72d-d063-42f6-a12e-1f6cce91b562"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Masuk]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="638" y="0" width="68" height="20" uuid="94b2e52e-3c92-4a9a-8d9d-40497085c12a"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Pulang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="706" y="0" width="96" height="20" uuid="433caf83-50ec-4f13-93d0-1ec640082bc1"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Keterangan]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="285" y="0" width="156" height="20" uuid="fdbb2223-0145-4c2a-9dde-3dfbf18fb36c"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{detail_data_absensi_detail_nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="441" y="0" width="131" height="20" uuid="e7c0e9e7-d494-4bb8-8a4e-3e59fea96ddb"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{detail_data_absensi_detail_shift}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="572" y="0" width="66" height="20" uuid="9c11121c-bc42-4f1d-b341-96c7d5fe7ee9"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{detail_data_absensi_detail_jam_masuk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="638" y="0" width="68" height="20" uuid="e42c465f-d9f2-4dea-924d-42b8fe34fe24"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{detail_data_absensi_detail_jam_pulang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="706" y="0" width="96" height="20" uuid="219ec615-a032-4460-b2f1-69c14cd5a9bd"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{detail_data_absensi_detail_keterangan}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="2" y="0" width="85" height="20" uuid="8f1ec15e-ee54-49af-8b70-ef87248a7592"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{detail_data_absensi_detail_tanggal_absensi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="88" y="0" width="57" height="20" uuid="44222314-9553-4112-af59-d4343f18e664"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{detail_data_absensi_detail_lokasi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="145" y="0" width="140" height="20" uuid="01723d7a-6db7-44b6-a019-24f9086b4da0"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{detail_data_absensi_detail_nik}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="158" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="652" y="21" width="150" height="20" uuid="e0600239-e61d-4b1a-9006-268db1a70bcd"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd MMMM yyyy",new java.util.Locale("id")).format(new Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="598" y="42" width="146" height="21" uuid="d5096413-c478-4d95-8bef-b957b1a58fd5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Car Park Manager]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="598" y="112" width="146" height="21" uuid="2928fcd4-3f3a-4705-81ec-a32752c21ebf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Thomas Pramudya]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="598" y="21" width="54" height="21" uuid="9f931394-2e4f-4b37-81de-e15308b53832"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

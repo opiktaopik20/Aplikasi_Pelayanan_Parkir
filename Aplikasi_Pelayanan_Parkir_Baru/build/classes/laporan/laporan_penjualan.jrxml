@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5fe56990-9d32-4d3a-8c9f-b6ca356d2f7e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     data_penjualan_kartu.`id_penjualan` AS data_penjualan_kartu_id_penjualan,
+     data_penjualan_kartu.`tanggal_penjualan` AS data_penjualan_kartu_tanggal_penjualan,
+     data_penjualan_kartu.`nama_karyawan` AS data_penjualan_kartu_nama_karyawan,
+     data_penjualan_kartu.`id_perusahaan` AS data_penjualan_kartu_id_perusahaan,
+     data_penjualan_kartu.`nama_perusahaan` AS data_penjualan_kartu_nama_perusahaan,
+     data_penjualan_kartu.`no_ktp` AS data_penjualan_kartu_no_ktp,
+     data_penjualan_kartu.`nama_pelanggan` AS data_penjualan_kartu_nama_pelanggan,
+     data_penjualan_kartu.`no_kendaraan` AS data_penjualan_kartu_no_kendaraan,
+     data_penjualan_kartu.`no_kartu` AS data_penjualan_kartu_no_kartu,lk
+     data_penjualan_kartu.`jenis` AS data_penjualan_kartu_jenis,
+     data_penjualan_kartu.`harga` AS data_penjualan_kartu_harga,
+     data_penjualan_kartu.`durasi` AS data_penjualan_kartu_durasi,
+     data_penjualan_kartu.`total` AS data_penjualan_kartu_total,
+     data_penjualan_kartu.`periode` AS data_penjualan_kartu_periode
+FROM
+     `data_penjualan_kartu` data_penjualan_kartu]]>
+	</queryString>
+	<field name="data_penjualan_kartu_id_penjualan" class="java.lang.String"/>
+	<field name="data_penjualan_kartu_tanggal_penjualan" class="java.sql.Date"/>
+	<field name="data_penjualan_kartu_nama_karyawan" class="java.lang.String"/>
+	<field name="data_penjualan_kartu_id_perusahaan" class="java.lang.String"/>
+	<field name="data_penjualan_kartu_nama_perusahaan" class="java.lang.String"/>
+	<field name="data_penjualan_kartu_no_ktp" class="java.lang.String"/>
+	<field name="data_penjualan_kartu_nama_pelanggan" class="java.lang.String"/>
+	<field name="data_penjualan_kartu_no_kendaraan" class="java.lang.String"/>
+	<field name="data_penjualan_kartu_no_kartu" class="java.lang.String"/>
+	<field name="data_penjualan_kartu_jenis" class="java.lang.String"/>
+	<field name="data_penjualan_kartu_harga" class="java.lang.String"/>
+	<field name="data_penjualan_kartu_durasi" class="java.lang.String"/>
+	<field name="data_penjualan_kartu_total" class="java.lang.String"/>
+	<field name="data_penjualan_kartu_periode" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="106" splitType="Stretch">
+			<staticText>
+				<reportElement x="256" y="0" width="310" height="23" uuid="abb51085-4a0e-4162-b7ca-cb71b2461cd7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PT SECURINDO PACKATAMA INDONESIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="256" y="46" width="310" height="23" uuid="54f7a9fe-03a0-44a8-b421-0576057f1974"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Kebon Melati Kecamatan Tanah Abang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="256" y="69" width="310" height="23" uuid="8616502e-be6a-4a0f-98cf-37547a1001d8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Jakarta Pusat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="256" y="23" width="310" height="23" uuid="3159f613-53c7-4dbc-8444-24e5e12ac37b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Jalan M.H. Thamrin Kav 8-10 RT. 14 / RW. 20]]></text>
+			</staticText>
+			<image>
+				<reportElement x="110" y="0" width="143" height="97" uuid="3761c337-1cff-4fd7-a4e4-259e7df5eb8e"/>
+				<imageExpression><![CDATA["C:\\Users\\opik\\Documents\\NetBeansProjects\\Aplikasi_Pelayanan_Parkir\\src\\gambar\\logo_spi.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="83" splitType="Stretch">
+			<staticText>
+				<reportElement x="199" y="12" width="414" height="23" uuid="16155cdf-2e3e-4a74-b491-36af91e10aa9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN PENJUALAN KARTU BERLANGGANAN PARKIR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-3" y="52" width="100" height="20" uuid="3e9b3f71-7ee9-4ef4-8e99-b5da04383993"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Waktu Cetak  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="52" width="100" height="20" uuid="c9473dc1-69ca-4bb5-9d26-b34d44464a32"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[WIB]]></text>
+			</staticText>
+			<textField pattern="HH.mm.ss">
+				<reportElement x="83" y="52" width="100" height="20" uuid="d47af265-d722-431e-882a-fc0b9534a590"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="0" width="28" height="20" uuid="00bc9a78-cf7a-4c20-9b89-4e8cfca67dbe"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="0" width="59" height="20" uuid="bea6d4e8-5449-4776-a6b1-89187233973f"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="166" y="0" width="131" height="20" uuid="2996d36f-aa6a-436c-9e89-bda3a27e5a39"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Nama Perusahaan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="297" y="0" width="78" height="20" uuid="b50fe4a4-417a-43a0-a67a-160ad919036a"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Pelanggan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="0" width="61" height="20" uuid="6cdc7fcd-8d91-4727-b8d2-f1cb6cd147a0"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[No Polisi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="436" y="0" width="100" height="20" uuid="d4345928-70ea-42c4-9849-45932715f0a0"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[No Kartu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="536" y="0" width="77" height="20" uuid="7f51c0c8-9f3e-4ddb-9126-c5dc75250584"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Jenis Kartu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="613" y="0" width="76" height="20" uuid="e000e043-61d8-49b7-8569-1270b48d224c"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Bayar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="689" y="0" width="113" height="20" uuid="f8f52c0b-5752-4cc8-912f-5eca99fb2db6"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Keterangan Periode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="88" y="0" width="78" height="20" uuid="10057875-8dfd-4e75-94f6-9868339d9ecb"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Kasir]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="1" y="0" width="28" height="20" uuid="4007e40d-0e40-4c69-b5d2-e709c68f439a"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{data_penjualan_kartu_id_penjualan}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="29" y="0" width="59" height="20" uuid="99d229f3-72ae-4f23-bc11-3df965f8ae2d"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{data_penjualan_kartu_tanggal_penjualan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="166" y="0" width="131" height="20" uuid="35ebe7be-915f-42c0-8c3d-4d1b603fb066"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{data_penjualan_kartu_nama_perusahaan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="297" y="0" width="78" height="20" uuid="209a710a-87dd-4388-aff1-795f4bf36b5c"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{data_penjualan_kartu_nama_pelanggan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="375" y="0" width="61" height="20" uuid="b9b0d559-74d0-4a47-9152-4ff005ed2e3b"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{data_penjualan_kartu_no_kendaraan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="436" y="0" width="100" height="20" uuid="686caa8a-0bf5-4e27-88b3-c6444c54e0a3"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{data_penjualan_kartu_no_kartu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="536" y="0" width="77" height="20" uuid="8454ed52-67c4-454b-92d8-968ab4df595a"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{data_penjualan_kartu_jenis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="613" y="0" width="76" height="20" uuid="c627c8d3-1866-4c3d-b55f-f79dda550c3c"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{data_penjualan_kartu_total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="689" y="0" width="113" height="20" uuid="e1a535e8-9141-436d-8eed-89a3bb8eb838"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{data_penjualan_kartu_periode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="88" y="0" width="78" height="20" uuid="b3601f83-0aa7-4f25-ac62-f7daa6cda5d2"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{data_penjualan_kartu_nama_karyawan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="154" splitType="Stretch">
+			<staticText>
+				<reportElement x="598" y="113" width="146" height="21" uuid="81af218a-bd75-493e-a538-9fc149a24b43"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Thomas Pramudya]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="598" y="22" width="54" height="21" uuid="6d65d54d-2df6-4239-98f6-37beabdff4ef"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="652" y="22" width="150" height="20" uuid="fef38107-2553-4a77-9edc-d1dac8d64e63"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd MMMM yyyy",new java.util.Locale("id")).format(new Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="598" y="43" width="146" height="21" uuid="e77781a0-aaaf-4c77-bcb6-269d63b6e066"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Car Park Manager]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

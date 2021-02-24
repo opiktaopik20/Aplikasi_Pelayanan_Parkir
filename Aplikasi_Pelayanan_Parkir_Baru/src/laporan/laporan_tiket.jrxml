@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c487ecf1-4d26-4c2a-a70e-b08ea4b1eb15">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     data_tiket.`id_tiket` AS data_tiket_id_tiket,
+     data_tiket.`tgl_tiket` AS data_tiket_tgl_tiket,
+     data_tiket.`nik` AS data_tiket_nik,
+     data_tiket.`nama` AS data_tiket_nama,
+     data_tiket.`shift` AS data_tiket_shift,
+     data_tiket.`pos` AS data_tiket_pos,
+     data_tiket.`jenis` AS data_tiket_jenis,
+     data_tiket.`tes_awal` AS data_tiket_tes_awal,
+     data_tiket.`tes_akhir` AS data_tiket_tes_akhir,
+     data_tiket.`terjual` AS data_tiket_terjual,
+     data_tiket.`total` AS data_tiket_total,
+     data_tiket.`terpakai` AS data_tiket_terpakai,
+     data_tiket.`batal` AS data_tiket_batal
+FROM
+     `data_tiket` data_tiket]]>
+	</queryString>
+	<field name="data_tiket_id_tiket" class="java.lang.String"/>
+	<field name="data_tiket_tgl_tiket" class="java.sql.Date"/>
+	<field name="data_tiket_nik" class="java.lang.String"/>
+	<field name="data_tiket_nama" class="java.lang.String"/>
+	<field name="data_tiket_shift" class="java.lang.String"/>
+	<field name="data_tiket_pos" class="java.lang.String"/>
+	<field name="data_tiket_jenis" class="java.lang.String"/>
+	<field name="data_tiket_tes_awal" class="java.lang.String"/>
+	<field name="data_tiket_tes_akhir" class="java.lang.String"/>
+	<field name="data_tiket_terjual" class="java.lang.String"/>
+	<field name="data_tiket_total" class="java.lang.String"/>
+	<field name="data_tiket_terpakai" class="java.lang.String"/>
+	<field name="data_tiket_batal" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="110" splitType="Stretch">
+			<staticText>
+				<reportElement x="280" y="69" width="301" height="23" uuid="74b87864-d800-4f6b-9317-f97ae175d5ad"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Jakarta Pusat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="46" width="301" height="23" uuid="42f5b3e5-d89e-4bf2-822f-58de00d1e7b2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Kebon Melati Kecamatan Tanah Abang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="23" width="301" height="23" uuid="2025bc16-ee8f-46e2-a388-7759df054f0a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Jalan M.H. Thamrin Kav 8-10 RT. 14 / RW. 20]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="0" width="301" height="23" uuid="8bb2a1d5-f4a7-4645-8623-eac7e65abcc5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PT SECURINDO PACKATAMA INDONESIA]]></text>
+			</staticText>
+			<image>
+				<reportElement x="137" y="0" width="143" height="97" uuid="66394e6b-d4ca-403a-8c0e-99b00f6e94a9"/>
+				<imageExpression><![CDATA["C:\\Users\\opik\\Documents\\NetBeansProjects\\Aplikasi_Pelayanan_Parkir\\src\\gambar\\logo_spi.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="93" splitType="Stretch">
+			<staticText>
+				<reportElement x="280" y="15" width="301" height="23" uuid="e3add33d-b6b9-4b9c-abf0-642fee502f41"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA TIKET MANUAL]]></text>
+			</staticText>
+			<textField pattern="HH.mm.ss">
+				<reportElement x="87" y="57" width="100" height="20" uuid="4d745ced-40a7-488f-a993-90783353179d"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="144" y="57" width="100" height="20" uuid="3244a0d6-bb6b-4075-8ee8-c6bf8f6c0b51"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[WIB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="57" width="100" height="20" uuid="e12f9e97-45db-4374-a960-90efe7722669"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Waktu Cetak  :]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="39" height="20" uuid="c19111b9-4298-4f99-86ed-088a6fdde3c6"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Id Tiket]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="39" y="0" width="70" height="20" uuid="f637ded8-cf6b-4d7e-b40a-9dc9bce8ccf3"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="109" y="0" width="83" height="20" uuid="887f0f44-7d94-483c-a1c6-d3412ac32c30"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[NIK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="192" y="0" width="100" height="20" uuid="223bfb2f-5b95-49b7-ae16-3a9cae6509d6"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nama Petugas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="292" y="0" width="50" height="20" uuid="54abaf62-d691-4240-9898-61a678b8dfc9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Shift]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="0" width="32" height="20" uuid="b8f92a7f-f4d0-4914-ac65-8420784dedd7"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Pos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="374" y="0" width="89" height="20" uuid="201f1cd9-c6b6-4230-8c3d-ed5064ae6530"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Jenis Tiket]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="463" y="0" width="74" height="20" uuid="f95ae8b4-53cc-4309-9cd1-09eb984b757d"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Tes Awal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="537" y="0" width="65" height="20" uuid="f72fcc11-f327-4028-814a-2462b8da067c"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Tes Akhir]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="602" y="0" width="57" height="20" uuid="13b9d2c0-b231-4542-b19c-253c20444082"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Total Tes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="659" y="0" width="47" height="20" uuid="61721554-07e0-4ad7-b30d-20007a093cbb"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Terjual]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="706" y="0" width="38" height="20" uuid="70196597-e39c-43dd-b003-a3a8f65aee22"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Batal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="744" y="0" width="58" height="20" uuid="c7636941-d259-46db-83df-3ff17d80ac57"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Terpakai]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="39" height="20" uuid="18333d6a-c025-4e1d-a0c8-e07135fa3688"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data_tiket_id_tiket}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="39" y="0" width="70" height="20" uuid="41e6a6e3-5482-4a1b-adc2-aef6a938b372"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data_tiket_tgl_tiket}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="109" y="0" width="83" height="20" uuid="1a93fdc7-69b2-41c3-bd96-6b5d02ed3282"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data_tiket_nik}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="192" y="0" width="100" height="20" uuid="f8809d54-ad22-42c3-be0b-ebd710b33e8d"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data_tiket_nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="292" y="0" width="50" height="20" uuid="a0f115c4-5abe-49cd-bace-182339577709"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data_tiket_shift}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="342" y="0" width="32" height="20" uuid="24bab450-20e7-47fd-b460-2a51e1e8856f"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data_tiket_pos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="374" y="0" width="89" height="20" uuid="0f1516e9-690d-4dd1-b120-898bd9db6f79"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data_tiket_jenis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="463" y="0" width="74" height="20" uuid="7f74f26c-7585-4b94-943e-23b472f2d6fc"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data_tiket_tes_awal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="537" y="0" width="65" height="20" uuid="6e3810d3-9280-4a20-9d92-abeecf91bd5a"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data_tiket_tes_akhir}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="602" y="0" width="57" height="20" uuid="33db8f4b-09db-4ab6-8fb2-68fce39adc84"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data_tiket_total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="659" y="0" width="47" height="20" uuid="786fff26-bd3f-42e3-9d17-a6412b9035ac"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data_tiket_terjual}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="706" y="0" width="38" height="20" uuid="2d0f5d2d-c703-4d58-b9fc-b19e25f87a4a"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data_tiket_batal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="744" y="0" width="58" height="20" uuid="336d048c-5a4e-4372-95bb-4e2ac6dba4af"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data_tiket_terpakai}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="158" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="652" y="28" width="150" height="20" uuid="c045eaf4-7ada-4a13-b5ff-b7d6feb78782"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd MMMM yyyy",new java.util.Locale("id")).format(new Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="598" y="119" width="146" height="21" uuid="071c040c-d8c6-435e-9f7a-ba521dbea403"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Thomas Pramudya]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="598" y="49" width="146" height="21" uuid="1cd831db-0706-49fd-a6da-4703892780d3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Car Park Manager]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="598" y="28" width="54" height="21" uuid="92a780bc-650b-41d3-bed0-ed850cc80687"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
